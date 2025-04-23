@@ -41,6 +41,7 @@ function AllPlayers({ setPlayer, searchTerm }) {
 						<img src={player?.imageUrl} style={{ height: "400px" }} />
 						<p>Team: {teamMap[String(player.teamId)] || "Unknown Team"}</p>
 						<p>Status: {player.status}</p>
+                        <button onClick={()=>handleClick(player)}>More Details</button>
 					</div>
 				))}
 				{filteredPlayers.length === 0 && <p>No players match your search.</p>}
